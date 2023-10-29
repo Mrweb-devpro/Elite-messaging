@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite messaging</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Baloo+Tammudu+2:wght@400;500;600;700;800&family=Oxygen:wght@300;400;700&family=Rubik+Beastly&family=Sonsie+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+      <!-- section form///////////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+      <section id="form_page" class="section-form" data-hide="hide-x_page">
+        <header class="header">
+          <img src="./css/--assets/logo.png" alt="logo in png" class="logo" />
+        </header>
+        <form action="" class="form">
+          <h1>Welcome to Elite Messaging</h1>
+          <div class="inp-cont">
+            <input
+              type="text"
+              name=""
+              id="username_inp"
+              class="inp"
+              placeholder="username"
+            />
+            <p class="error-message" id="error_p"></p>
+            <button class="btn" id="open-chat_btn">open chat</button>
+          </div>
+        </form>
+      </section>
+      <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+      <!-- section dashboard///////////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+      <section
+        class="section-dashboard hide-x_page"
+        data-hide="hide-x_page"
+        id="chat_page"
+      >
+        <header class="header">
+          <div class="box"></div>
+          <img src="./css/--assets/logo.png" alt="logo in png" class="logo" />
+        </header>
+        <div class="chat-box" id="chat_box"></div>
+
+        <footer class="footer">
+          <p id="username_cont">--John--</p>
+          <input
+            type="text"
+            name=""
+            id="send-message_inp"
+            class="inp"
+            placeholder="Say something..."
+          />
+          <button class="btn" id="send_btn">
+            <img
+              src="./css/--assets/send-icon.png"
+              alt="send icon"
+              class="icon"
+            />
+          </button>
+        </footer>
+      </section>
+    </main>
+    <script defer src="./js/bundle.js"></script>
+  </body>
+</html>

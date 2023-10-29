@@ -1,0 +1,28 @@
+@mixin flex-center($dir, $gap) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+  gap: $dir;
+}
+@mixin flex-jus_start($dir, $gap) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $gap;
+}
+@mixin trans {
+  transition: all 0.5s;
+}
+@mixin family-ox {
+  font-family: "Oxygen", sans-serif;
+}
+@mixin family-baloo {
+  font-family: "Baloo", sans-serif;
+}
+@mixin chat-name-font {
+  font-family: "Baloo", sans-serif;
+  font-size: fontsize(small);
+  font-weight: 800;
+}

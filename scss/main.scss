@@ -1,0 +1,76 @@
+///////////////////////////////////////////////////////////////////////////
+//--NEXT///////////////////////////////////////////////////////////////////
+//--importing from general
+///////////////////////////////////////////////////////////////////////////
+@import "generial/variables";
+@import "generial/fucntion";
+@import "generial/mixin";
+@import "generial/reset";
+@import "generial/forAll";
+@import "generial/js-pickup";
+
+///////////////////////////////////////////////////////////////////////////
+//--NEXT///////////////////////////////////////////////////////////////////
+//--importing from pages
+///////////////////////////////////////////////////////////////////////////
+@import "pages/chat-page";
+
+///////////////////////////////////////////////////////////////////////////
+//--NEXT///////////////////////////////////////////////////////////////////
+//--section form styling
+///////////////////////////////////////////////////////////////////////////
+.section-form {
+  @include flex-jus_start(column, 10rem);
+  // background-color: red;
+  & .header {
+    width: 100%;
+  }
+  & .form {
+    width: 100%;
+    // background-color: yellow;
+    @include flex-jus_start(column, 6rem);
+    & h1 {
+      @include family-baloo;
+
+      font-size: fontsize(large);
+      @include flex-jus_start(column, 6rem);
+    }
+    & .inp-cont {
+      & .inp {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #bbb;
+        width: 20rem;
+        color: #222;
+        &:focus {
+          border-color: $grey-color;
+        }
+      }
+
+      @include flex-jus_start(column, 2rem);
+    }
+    & .error-message {
+      font-size: fontsize(smaller);
+      color: red;
+    }
+    & .btn {
+      background-color: $grey-color;
+      @include family-baloo;
+      padding: 0.5rem 1.7rem;
+      // box-shadow: -0px 0px 1px 1px rgba(45, 40, 21, 0.5);
+      border-radius: 2px;
+      border: none;
+      color: white;
+      font-size: fontsize(small);
+      font-weight: weigth(bold);
+      @include trans;
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        // scale: 0.8;
+        transform: translateY(-10px);
+      }
+    }
+  }
+}

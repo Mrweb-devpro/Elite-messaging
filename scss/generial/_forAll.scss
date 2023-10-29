@@ -1,0 +1,21 @@
+section {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  @include trans;
+  transition-duration: 1s;
+}
+.logo {
+  width: 8rem;
+  height: auto;
+}
+.inp {
+  @include family-ox;
+  &::placeholder {
+    user-select: none;
+    font-size: fontsize(small);
+  }
+  &:focus {
+    outline: none;
+  }
+}

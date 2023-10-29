@@ -1,0 +1,8 @@
+.hide-x_page {
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  // transform: rotateY(180deg);
+  transform: translateX(-100vh);
+  backface-visibility: hidden;
+}

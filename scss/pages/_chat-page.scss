@@ -1,0 +1,118 @@
+.section-dashboard {
+  $conner-size: 43px;
+  // background-color: red;
+  padding: 0;
+  display: grid;
+  grid-template-columns: $conner-size 1fr $conner-size;
+  grid-template-rows: $conner-size 1fr $conner-size;
+  & .header {
+    position: relative;
+    // background-color: green;
+    width: 100%;
+    height: 100%;
+    grid-column: 1/ -1;
+    border-bottom: 1px solid #bbb;
+    @include flex-center(row, 0px);
+    flex-wrap: wrap;
+
+    & .box {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: $conner-size;
+      height: $conner-size;
+      background-color: $cta-color;
+    }
+  }
+  & .chat-box {
+    grid-column: 2;
+    padding: 1rem 0;
+    // background-color: yellow;
+    overflow-y: scroll;
+    @include flex-jus_start(column, 1rem);
+    align-items: flex-start;
+
+    & .chat {
+      &.right {
+        align-self: flex-end;
+      }
+      // background-color: red;
+      width: fit-content;
+      max-width: 50%;
+      @include flex-jus_start(row, 1rem);
+      align-items: flex-start;
+
+      & > p {
+        @include chat-name-font;
+      }
+      & .chat-message {
+        border-radius: 4px;
+        border-top-left-radius: 0px;
+        padding: 0.8rem;
+        background-color: $message-color;
+        min-height: 5rem;
+        @include flex-jus_start(column, 1rem);
+        & .message {
+          width: 100%;
+          line-height: 1.3;
+          font-weight: weight(bold);
+          @include family-ox;
+        }
+        & .date {
+          font-size: fontsize(miny);
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+  & .footer {
+    padding: 0 1.5rem;
+    grid-column: 2;
+    background-color: $component-color;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: 1fr;
+    align-items: center;
+    column-gap: 2rem;
+    & p {
+      grid-column: 1;
+      width: fit-content;
+      @include chat-name-font;
+    }
+    & .inp {
+      grid-column: 2;
+      // width: fit-content;
+      height: fit-content;
+      border: none;
+      background-color: transparent;
+      font-size: fontsize(smaller);
+      font-weight: 700;
+      &::placeholder {
+        font-size: fontsize(smaller);
+      }
+    }
+    & .btn {
+      grid-column: 3;
+      width: fit-content;
+      height: fit-content;
+      background-color: $cta-color;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 50%;
+      @include trans;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 1px 4px rgba(112, 98, 51, 0.3);
+      }
+      &:focus {
+        scale: 0.8;
+        box-shadow: none;
+      }
+      .icon {
+        width: 20px;
+        height: auto;
+      }
+    }
+  }
+}
