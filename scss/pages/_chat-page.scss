@@ -37,12 +37,13 @@
         align-self: flex-end;
         & .chat-message {
           background-color: $cta-color;
-          color: #bbb;
+          color: #ffff;
         }
       }
       // background-color: red;
       width: fit-content;
       max-width: 50%;
+      font-size: fontsize(small);
       @include flex-jus_start(row, 1rem);
       align-items: flex-start;
 

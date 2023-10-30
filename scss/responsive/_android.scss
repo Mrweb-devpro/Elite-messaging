@@ -28,9 +28,7 @@
   ::-webkit-scrollbar {
     width: 3px;
   }
-  body {
-    // background-color: red;
-  }
+
   .section-dashboard {
     // grid-template-columns: 100%;
     & .header {
@@ -40,6 +38,9 @@
       padding: 1rem;
       grid-column: 1 / -1;
       grid-row: 2;
+      & .chat {
+        max-width: 80%;
+      }
     }
     & .footer {
       grid-column: 1 / -1;
