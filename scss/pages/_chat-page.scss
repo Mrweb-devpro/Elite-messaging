@@ -32,10 +32,13 @@
     overflow-y: scroll;
     @include flex-jus_start(column, 1rem);
     align-items: flex-start;
-
     & .chat {
       &.right {
         align-self: flex-end;
+        & .chat-message {
+          background-color: $cta-color;
+          color: #bbb;
+        }
       }
       // background-color: red;
       width: fit-content;

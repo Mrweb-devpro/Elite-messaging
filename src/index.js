@@ -12,6 +12,7 @@ import {
   orderByChild,
   serverTimestamp,
   query,
+  goOnline,
 } from "firebase/database";
 
 const firebaseConfig = {
@@ -115,12 +116,13 @@ openChat_btn.addEventListener("click", (e) => {
     error_p.innerHTML = isReadyToOpenChat();
   }
 });
+
 ////////////////////////////////////////////////////////////////////////////////
 // --NEXT///////////////////////////////////////////////////////////////////////
 // to  send messages//////////////////////////////////////////////////////////////////////////////
-
 send_btn.addEventListener("click", (e) => {
   e.preventDefault();
+  allChatsCont.scrollTo({ top: allChatsCont.scrollHeight, behavior: "smooth" });
   const inpValue = sendMessage_inp.value;
   if (inpValue) {
     push(chatObjInDb, {
