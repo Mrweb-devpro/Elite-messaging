@@ -136,21 +136,7 @@ send_btn.addEventListener("click", (e) => {
     sendMessage_inp.value = "";
   }
 });
-/*
-const chatObjInDb = ref(db, "chats");
-onValue(chatObjInDb, (snapshot) => {
-  console.log(snapshot.val());
-});
-orderByPriority("time");
-const deleteRef = ref(db, "chats/-NhtEWsvumk4eA0r4BQ_");
-push(chatObjInDb, {
-  name: "username",
-  time: serverTimestamp(),
-});
-remove(deleteRef);
-// push(chatObjInDb, "john");
 
-*/
 ////////////////////////////////////////////////////////////////////////////////
 // --NEXT///////////////////////////////////////////////////////////////////////
 // to  load messages//////////////////////////////////////////////////////////////////////////////
@@ -171,4 +157,5 @@ onValue(q, (snapshot) => {
   </div>
     `;
   });
+  allChatsCont.scrollTo({ top: allChatsCont.scrollHeight, behavior: "smooth" });
 });
